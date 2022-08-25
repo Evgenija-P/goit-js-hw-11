@@ -1,6 +1,7 @@
 .search-form {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100%;
   position: sticky;
   top: 5px;
@@ -11,7 +12,7 @@ input {
   margin-top: 10px;
   margin-bottom: 10px;
   padding-left: 10px;
-  width: 400px;
+  width: 300px;
   height: 40px;
   border-radius: 5px;
 }
@@ -51,11 +52,8 @@ img {
 }
 
 button {
-  position: absolute;
-  top: 20%;
-  right: 40%;
+  border-radius: 5px;
   width: 80px;
-  height: 40px;
-  margin: 0;
+  height: 45px;
   background-color: aliceblue;
 }
