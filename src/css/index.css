@@ -33,7 +33,7 @@ img {
   display: flex;
   flex-direction: column;
   padding-top: 30px;
-  width: calc(100% / 3 - 30px);
+  width: calc(100% / 4 - 40px);
   margin-right: 10px;
   margin-left: 10px;
 }
@@ -62,3 +62,54 @@ button {
   opacity: 0;
   pointer-events: none;
 }
+
+.load-more {
+  margin-left: 50%;
+  border-radius: 5px;
+  width: 100px;
+  height: 60px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  bottom: 5px;
+
+  color: aliceblue;
+  background-color: rgb(72, 72, 183);
+}
+
+/* Start: Кнопки вверх вниз */
+.go-up,
+.go-down {
+  display: none;
+  position: fixed; /*позиционируем*/
+  right: 5px; /*указываем положение, если слева - left*/
+  z-index: 9999; /*показываем поверх все элементов на странице*/
+  background: rgb(72, 72, 183);
+  border: 2px solid #ccc; /*толщина, стиль, цвет рамки*/
+  box-shadow: 0 10px 0.3em -0.1em rgba(72, 72, 183, 0.5); /*тень*/
+  border-radius: 10px;
+  cursor: pointer;
+  color: #fff; /*цвет стрелок*/
+  text-align: center; /*выравнивание*/
+  font-size: 40px; /*размер стрелок*/
+  text-shadow: 0 1px 2px #000, 0 0 10px #e0f1ff;
+  opacity: 0.7; /*прозрачность*/
+  padding: 0px 3px 10px 3px; /*отступы внутри*/
+  margin-bottom: 5px; /*отступ снизу (можно не указывать)*/
+  width: 48px; /*ширина кнопки*/
+  height: 48px; /*высота кнопки*/
+}
+.go-up {
+  bottom: 75px; /*положение от низа окна браузера*/
+}
+.go-down {
+  bottom: 10px;
+}
+/*стили при наведении курсора*/
+.go-down:hover,
+.go-up:hover {
+  opacity: 1;
+}
+/* End: Кнопки вверх вниз */
