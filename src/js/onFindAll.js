@@ -6,6 +6,6 @@ export const onFindAll = async (name, page, perPage) => {
   const urlOptions = `image_type=photo&orientation=horizontal&safesearch=true&page=${page}&per_page=${perPage}`;
 
   const response = await axios.get(`${url}?${API_KEY}&q=${name}&${urlOptions}`);
-  console.log(response.data);
+  // console.log(response.data);
   return response.data;
 };

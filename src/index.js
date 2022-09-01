@@ -10,14 +10,13 @@ const input = document.querySelector(`input`);
 const form = document.querySelector(`.search-form`);
 const galleryConteiner = document.querySelector(`.gallery`);
 const btnMore = document.querySelector(`.load-more`);
-const btnUp = document.querySelector(`.up`);
 
 var page = 1;
 var perPage = 40;
+var lightbox = new SimpleLightbox('.gallery a');
 
 form.addEventListener(`submit`, onSearch);
 btnMore.addEventListener(`click`, onLoadMore);
-btnUp.addEventListener(`click`, scrollUp);
 
 async function onSearch(event) {
   event.preventDefault();
@@ -65,7 +64,7 @@ async function onLoadMore() {
 
   const data = await onFindAll(input.value, page, perPage);
   makeGallary(data);
-  gallery.refresh();
+  lightbox.refresh();
 }
 
 function listCleaner() {
