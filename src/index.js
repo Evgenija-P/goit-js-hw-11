@@ -1,5 +1,6 @@
 import { onFindAll } from './js/onFindAll.js';
 import { createGallery } from './js/render.js';
+import './css/index.css';
 
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
